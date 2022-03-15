@@ -1,10 +1,10 @@
 package com.day21.moodanalyser;
 
 /**
- * Given ìI am in Sad Moodî message Should Return SAD analyseMood method can just return
+ * Given ‚ÄúI am in Sad Mood‚Äù message Should Return SAD analyseMood method can just return
  * SAD to pass this Test Case (TC)
  * 
- * Given ìI am in Any Moodî message Should Return HAPPY
+ * Given ‚ÄúI am in Any Mood‚Äù message Should Return HAPPY
  * 
  * To make the Test case pass analyseMood method need to check for Sad else return HAPPY
  */
@@ -35,9 +35,9 @@ public class MoodAnalyserTest {
 	/**
 	 * created method analyseAnyMood() for getting mood as Happy
 	 */
-	public void analyseAnyMood() {
+	public void analyseHappyMood() {
 		MoodAnalyser moodAnalyser = new MoodAnalyser();
-		moodAnalyser.setMessage("I am in any Mood");
+		moodAnalyser.setMessage("I am in Happy Mood");
 		String actualResult = moodAnalyser.analyseMood();
 		Assert.assertEquals("HAPPY", actualResult);
 	}
