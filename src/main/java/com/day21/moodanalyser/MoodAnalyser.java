@@ -1,7 +1,7 @@
 package com.day21.moodanalyser;
 
 /*
- *  UC1-Given a Message, ability to analyse and respond Happy or Sad Mood 
+ *  Given a Message, ability to analyse and respond Happy or Sad Mood 
  * -create MoodAnalyser Object - Call analyseMood function with message as
  *  parameter and return Happy or Sad Mood
  */
@@ -54,14 +54,12 @@ public class MoodAnalyser {
 	 */
 
 	public String analyseMood() {
-		try {
-			if (message.toLowerCase().contains("sad")) {
-				return "SAD";
-			} else {
-				return "HAPPY";
-			}
-		} catch (NullPointerException e) {
+		if (message.toLowerCase().contains("happy") || message.toLowerCase().contains("any")) {
 			return "HAPPY";
+		} else if (message.toLowerCase().contains("sad")) {
+			return "SAD";
+		} else {
+			return null;
 		}
 	}
 
@@ -84,7 +82,5 @@ public class MoodAnalyser {
 		moodAnalyser.setMessage("I am Sad");
 		System.out.println(moodAnalyser.analyseMood());
 
-		moodAnalyser.setMessage(null);
-		System.out.println(moodAnalyser.analyseMood());
 	}
 }
