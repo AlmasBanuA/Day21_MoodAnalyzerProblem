@@ -4,6 +4,11 @@ package com.day21.moodanalyser;
  *  Given a Message, ability to analyse and respond Happy or Sad Mood 
  * -create MoodAnalyser Object - Call analyseMood function with message as
  *  parameter and return Happy or Sad Mood
+ *  
+ *  Refactoring the code to take the mood message in Constructor
+ *  
+ *  MoodAnalyser will have 2 Constructors – Default - MoodAnalyser() and 
+ *  with Parameters – MoodAnalyser(message)
  */
 
 /**
@@ -26,7 +31,7 @@ public class MoodAnalyser {
 	/**
 	 * create parameterized constructor by passing string message
 	 * 
-	 * @param message
+	 * @param message -passing string message
 	 */
 	public MoodAnalyser(String message) {
 		this.message = message;
